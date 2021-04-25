@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    
+    </style>
+    <title>spamORnot?</title>
+</head>
+<body>
+
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="{{url_for('static',filename='logo.png')}}" class="w-10 h-10 text-white" >
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </img>
+            <span class="ml-3 text-xl">SPAM EMAIL DETECTOR</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a href ="/"class="mr-5 hover:text-gray-900 " style="color: crimson">HOME</a>
+            <a href="{{url_for('about')}}" class="mr-5 hover:text-gray-900">ABOUT US</a>
+            
+          </nav>
+          
+        </div>
+      </header>
+
+
+  
+
+      <section class="text-gray-600 body-font relative">
+        <div class="container px-5 py-5 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">CHECK FOR SPAM</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Simply paste or write downthe email in the box below.</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto">
+            <div class="flex flex-wrap -m-2">
+              
+              </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 text-sm text-gray-600">EMAIL text</label>
+
+                    <form action="{{url_for('predict')}}" method="POST">
+
+                 
+                      <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                      <input type="Submit" id="submitbtn" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" value="check">
+
+
+
+
+                    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                </div>
+              </div>
+
+              
+            
+
+
+
+
+
+
+
+
+              <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+
+                <a class="text-indigo-500">spamornot@email.com</a>
+                <p class="leading-normal my-5">
+                  <br>Pune,Maharshtra,India
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+</body>
+</html>

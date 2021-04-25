@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+
+            {%if data==0%} 
+            <div>
+              <h1>prediction:not spam </h1>
+                <img src="{{url_for('static',filename='ham.jpg')}}" alt="NOT SPAM " class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded">
+                
+            </div>
+            {%elif data==1%}
+            <div>
+              <h1>prediction:spam </h1>
+                <img src="{{url_for('static',filename='spam.jpg')}}" alt="SPAM" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded">
+                
+            </div> 
+            {%else%}
+                <h1>check with your input ,something went wrong </h1>
+
+            
+            {%endif%} 
+            <a href="/" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">go back to home page</a>
+
+
+        
+          <div class="text-center lg:w-2/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"></h1>
+            <p class="mb-8 leading-relaxed">copyright </p>
+            
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+   
+      
+</body>
+</html>
