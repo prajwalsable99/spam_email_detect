@@ -9,4 +9,3 @@ joblib==0.16.0
 matplotlib==3.4.1
 scikit_learn==0.24.1
 numpy==1.18.5
-scipy==1.5.2
